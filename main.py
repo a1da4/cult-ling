@@ -15,7 +15,7 @@ def global_local(args):
                     "promise",
                     "gay",
                     "cell"]
-    #target_words = id2word.values()
+    #target_words = [word for word in id2word.values()]
     
     word2id = {}
     for word_id, word in id2word.items():
@@ -33,7 +33,7 @@ def global_local(args):
 
     print("### global - local ###")
     print("### ↑linguistic, ↓cultural ###")
-    for sorted_id in np.argsort(gl_values):
+    for sorted_id in np.argsort(-1 * gl_values):
         print(f"{target_words[sorted_id]}\t{gl_values[sorted_id]}")
 
         
